@@ -18,3 +18,13 @@ install:
 
 script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadless
+
+addons:
+  sonarcloud:
+    organization: "lorescianatico-github"
+    token:
+      secure: "LAsqHZ1DAgoH1FuuQ0GZ1BbEP7bjQrvv4GM9SwPUhOcfK/2wjYDKX7Wt5T9MWwz6iX49RruiGZlzF0f+ZLib6MJOj1mqx6Xq7tgJ2+hGNPPKllVhytGV9mYvbewpYLDNtSlbbju3266WuRU5lSAm1fNoYvykDW+gw4WFANhKttNvPvdRp7bDpO50NnQ0211h4KfCjQU4abuFT8xsU5uVQbGu/iZhxG/gGA50YnBVRBs5Gy0Lr1OFIzCVcjvdOhO4MvwYaP0KqQHHE/N+h5MvhJYhXkxFFTD2RO45BgvPlnxS9+YPmbnNVaqCz750ClZKU6Ec2Tch9zsxictxnnF5TxN08vUd+YZNT7RY1t3a0kapHwzdIn6Bw3DOGMCPVt7mLwyJiyaxFa6UM5ICMudk4KitqFd60e5I0Yh/teEQ1Y6Ys1zF4eQsAsmM5MdJThDlkGHhLUsP7Irbk1vVMc57kJAuFKMZYZgqXm2TT2LObzHaapMn8OmS5x649DyGvgq7z4+doTSHP+mvVIeLzaxeqW5y4OnuZSgup4caMY12GmXT+vOpqRSJw0T2/OJ5r9MemkxnrG6Tq8skbrs5JW3cGayV+2BQ5GG2Ton388LpeG2lNP1HDQjWmrwUMDLNqjRqYSJfGV4a3JZBy4PjjjyNpTvrkh0QFvoaP4QK7qwNdU0="
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
