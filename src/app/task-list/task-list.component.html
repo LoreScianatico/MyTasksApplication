@@ -2,7 +2,7 @@
     <div class="col-md-12" *ngFor="let item of taskList" >
         <span [ngClass]="{'done': item.done}">{{item.text}}</span>
         <a href="#" (click)="toggleDone(item)">
-            <fa-icon [icon]="faCheck"></fa-icon>
+            <fa-icon [icon]="['fas','check']"></fa-icon>
         </a>
     </div>
 </div>

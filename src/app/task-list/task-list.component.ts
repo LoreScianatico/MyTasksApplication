@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-list',
@@ -7,8 +6,6 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./task-list.component.less']
 })
 export class TaskListComponent implements OnInit {
-
-  faCheck = faCheck;
 
   public taskList: Array<Task> = [new Task("a"), new Task("b")]
 
