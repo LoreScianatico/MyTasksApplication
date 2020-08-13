@@ -5,10 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskEditorComponent } from './task-editor/task-editor.component';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import { IconsModule } from './icons/icons.module'
 
 @NgModule({
   declarations: [
@@ -19,15 +16,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-
-  constructor (library: FaIconLibrary){
-    library.addIcons(faCheck)
-  }
-
-}
+export class AppModule { }
