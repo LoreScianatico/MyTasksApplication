@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.less']
+  styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent implements OnInit {
 
@@ -25,7 +25,7 @@ class Task {
 
   public done: boolean;
 
-  constructor(text: string) { 
+  constructor(text: string) {
     this.text = text;
     this.done = true;
   }
